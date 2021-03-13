@@ -3,8 +3,72 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<style>
+
+table {
+  background-color: #33CCFF;
+  border-collapse: collapse;
+  width: 80%;
+}
+th, td {
+  padding: 5px;
+  border-collapse: collapse;
+  }
+  th {
+  background-color: #4CAF50;
+  color: white;
+  }
+  a{
+  text-decoration:none;
+  }
+</style>
 </head>
 <body>
-<a href="viewAllOrdersServlet">Veiw All The Orders</a>
+<br />
+<br />
+<br />
+<form action = "addNewBookServlet" method="post">
+<table align="center">
+<tr>
+	<th colspan="2">Add New Book</th>
+</tr>
+<tr>
+<td align="right"> ISBN: </td> 
+<td><input type ="text" name = "isbn"></td>
+</tr>
+<tr>
+<td align="right">Title: </td> 
+<td><input type = "text" name = "title"></td>
+</tr>
+<tr>
+<td align="right">Category: </td> 
+<td><input type = "text" name = "category"></td>
+</tr>
+<tr>
+<td align="right">Publication Date: </td> 
+<td><input type = "text" name = "year"><input type = "text" name = "month"><input type = "text" name = "day"></td>
+</tr>
+<tr>
+<td align="right">Cost: </td> 
+<td><input type = "text" name = "cost"></td>
+</tr>
+<tr> 
+<td></td>
+<td><input type = "submit" value="Add Book"></td>
+</tr>
+</table>
+</form> 
+<br />
+<br />
+<center>
+<a href="viewAllOrdersServlet">Veiw All The Orders</a><br />
+<a href="addNewBookServlet">Add a new Book</a><br />
+<a href = "viewAllBooksServlet">View All Books</a>
+</center>
 </body>
 </html>
+
+
+
+
+
