@@ -30,7 +30,7 @@ th, td {
 <form action = "addNewBookServlet" method="post">
 <table align="center">
 <tr>
-	<th colspan="2">Add New Book</th>
+	<th colspan="4">Add New Book</th>
 </tr>
 <tr>
 <td align="right"> ISBN: </td> 
@@ -46,7 +46,8 @@ th, td {
 </tr>
 <tr>
 <td align="right">Publication Date: </td> 
-<td><input type = "text" name = "year"><input type = "text" name = "month"><input type = "text" name = "day"></td>
+<td><input type = "text" name = "year" placeholder="YYYY" size ="3"><input type = "text" name = "month" placeholder="MM" size ="3"><input type = "text" name = "day" placeholder="DD" size ="3"></td>
+<td></td>
 </tr>
 <tr>
 <td align="right">Cost: </td> 
@@ -62,8 +63,7 @@ th, td {
 <br />
 <center>
 <a href="viewAllOrdersServlet">Veiw All The Orders</a><br />
-<a href="addNewBookServlet">Add a new Book</a><br />
-<a href = "viewAllBooksServlet">View All Books</a>
+<a href="viewAllBooksServlet">Veiw All The Books</a>
 </center>
 </body>
 </html>

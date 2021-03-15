@@ -8,9 +8,9 @@
 		<class>model.Order</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/bookstore"/>
-			<property name="javax.persistence.jdbc.user" value="root"/>
-			<property name="javax.persistence.jdbc.password" value="A1b2u3@talib"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://cis175.c3vjmwrf3uf9.us-east-1.rds.amazonaws.com/bookstore"/>
+			<property name="javax.persistence.jdbc.user" value="admin"/>
+			<property name="javax.persistence.jdbc.password" value="aws_2021"/>
 		</properties>
 	</persistence-unit>
 </persistence>

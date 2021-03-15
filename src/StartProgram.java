@@ -21,16 +21,16 @@ public class StartProgram {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Student st = new Student(9999);
-		Book bk = new Book(19822,"Web", "Web Dev", LocalDate.now(),56);
-		
-		Order or = new Order(bk,st);
-		OrderHelper oh = new OrderHelper();
-		oh.setOrder(or);
-		List<Order> allOrders = oh.showAllOrders();
-		for(Order os: allOrders) {
-			System.out.println(os.toString());
+		Book b = new Book();
+		b.setIsbn( 1111000 );
+		BookHelper bh = new BookHelper();
+		bh.updateBook(b);
+		bh.insertBook(b);
+		List<Book> allBooks = bh.showAllBooks();
+		for(Book bs: allBooks) {
+			System.out.println(bs.toString());
 		}
+		
 		
 
 		

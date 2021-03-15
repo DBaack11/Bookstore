@@ -23,6 +23,11 @@ th {
   background-color: #4CAF50;
   color: white;
 }
+
+a{
+  text-decoration:none;
+  }
+  
 tfoot {
  border-bottom: none;
 }
@@ -47,11 +52,11 @@ tr:hover {background-color:#f5f5f5;}
 <c:forEach items ="${requestScope.allOrders}" var="currentorders">
 <tr>
 
- <td>${currentorders.orderId}</td>
- <td>${currentorders.orderDate}</td>
- <td>${currentorders.book.isbn}</td>
- <td>${currentorders.book.title}</td>
- <td>${currentorders.student.stId}</td>
+ <td><b>${currentorders.orderId}</b></td>
+ <td><b>${currentorders.orderDate}</b></td>
+ <td><b>${currentorders.book.isbn}</b></td>
+ <td><b>${currentorders.book.title}</b></td>
+ <td><b>${currentorders.student.stId}</b></td>
  
  </tr>
  <tr>
@@ -63,6 +68,12 @@ tr:hover {background-color:#f5f5f5;}
 </table>
 
 </form>
-
+<br />
+<br />
+<center>
+<a href="viewAllOrdersServlet">Veiw All The Orders</a><br />
+<a href="index.html">Add a new Book</a><br />
+<a href = "viewAllBooksServlet">View All Books</a>
+</center>
 </body>
 </html>
