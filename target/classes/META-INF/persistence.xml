@@ -3,14 +3,16 @@
 	<persistence-unit name="BookStore" transaction-type="RESOURCE_LOCAL">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<class>model.Book</class>
-		<class>controller.LocalDateAttributeConverte</class>
+		<class>controller.LocalDateAttributeConverter</class>
 		<class>model.Student</class>
 		<class>model.Order</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/bookstore"/>
 			<property name="javax.persistence.jdbc.user" value="root"/>
-			<property name="javax.persistence.jdbc.password" value="A1b2u3@talib"/>
+			<!-- Comment out my password tag and uncomment yours to use for your local database -->
+			<!-- <property name="javax.persistence.jdbc.password" value="A1b2u3@talib"/> -->
+			<property name="javax.persistence.jdbc.password" value="vikings01"/>
 		</properties>
 	</persistence-unit>
 </persistence>

@@ -9,7 +9,7 @@ import javax.persistence.Converter;
  * Abutalib Hasan - amhasan 202101 CIS171 12928 Mar 1, 2021
  */
 @Converter(autoApply = true)
-public class LocalDateAttributeConverte implements AttributeConverter<LocalDate, Date> {
+public class LocalDateAttributeConverter implements AttributeConverter<LocalDate, Date> {
 
 	@Override
 	public Date convertToDatabaseColumn(LocalDate attribute) {

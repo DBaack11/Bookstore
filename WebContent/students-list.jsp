@@ -1,11 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>List of Students</title>
 <style>
 table {
   border-collapse: collapse;
@@ -38,20 +38,18 @@ tr:hover {background-color:#f5f5f5;}
 <table align="center">
 <tr>
 	
-    <th>Order ID</th>
-    <th>Order date</th>
-    <th>Book ISBN</th>
-    <th>Book Title</th>
-    <th>Student Id</th>
+    <th>Student ID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+ 
 </tr>
-<c:forEach items ="${requestScope.allOrders}" var="currentorders">
+<c:forEach items ="${requestScope.allStudents}" var="currentstudents">
 <tr>
 
- <td>${currentorders.orderId}</td>
- <td>${currentorders.orderDate}</td>
- <td>${currentorders.book.isbn}</td>
- <td>${currentorders.book.title}</td>
- <td>${currentorders.student.stId}</td>
+ <td>${currentstudents.stId}</td>
+ <td>${currentstudents.stFname}</td>
+ <td>${currentstudents.stLast}</td>
+
  
  </tr>
  <tr>
@@ -63,13 +61,11 @@ tr:hover {background-color:#f5f5f5;}
 </table>
 
 </form>
+
 <br/>
 <br/>
 <center><u>
 <a href="index.html">Return To Home Page</a><br />
 </u></center>
-
 </body>
-
-
 </html>

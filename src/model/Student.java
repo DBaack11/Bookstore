@@ -15,7 +15,7 @@ import javax.persistence.Table;
 public class Student {
 	@Id
 	@Column(name="ST_ID")
-	private int stId;
+	private String stId;
 	@Column(name="ST_FNAME")
 	private String stFname;
 	@Column(name="ST_LNAME")
@@ -32,7 +32,7 @@ public class Student {
 	 * @param stFname
 	 * @param stLast
 	 */
-	public Student(int stId, String stFname, String stLast) {
+	public Student(String stId, String stFname, String stLast) {
 		super();
 		this.stId = stId;
 		this.stFname = stFname;
@@ -41,7 +41,7 @@ public class Student {
 	/**
 	 * @param stId
 	 */
-	public Student(int stId) {
+	public Student(String stId) {
 		super();
 		this.stId = stId;
 	}
@@ -57,13 +57,13 @@ public class Student {
 	/**
 	 * @return the stId
 	 */
-	public int getStId() {
+	public String getStId() {
 		return stId;
 	}
 	/**
 	 * @param stId the stId to set
 	 */
-	public void setStId(int stId) {
+	public void setStId(String stId) {
 		this.stId = stId;
 	}
 	/**

@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 import java.util.List;
-import controller.LocalDateAttributeConverte;
+import controller.LocalDateAttributeConverter;
 import controller.OrderHelper;
 import controller.StudentHelper;
 import controller.BookHelper;
@@ -21,7 +21,7 @@ public class StartProgram {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Student st = new Student(9999);
+		Student st = new Student("9999");
 		Book bk = new Book(19822,"Web", "Web Dev", LocalDate.now(),56);
 		
 		Order or = new Order(bk,st);

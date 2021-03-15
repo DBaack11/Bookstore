@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>List of Books</title>
 <style>
 table {
   border-collapse: collapse;
@@ -63,6 +63,12 @@ tr:hover {background-color:#f5f5f5;}
 </table>
 
 </form>
+
+<br/>
+<br/>
+<center><u>
+<a href="index.html">Return To Home Page</a><br />
+</u></center>
 
 </body>
 </html>
