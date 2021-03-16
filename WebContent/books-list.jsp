@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>List of Books</title>
+<title>Insert title here</title>
 <style>
 table {
   border-collapse: collapse;
@@ -23,6 +23,11 @@ th {
   background-color: #4CAF50;
   color: white;
 }
+
+a{
+  text-decoration:none;
+  }
+  
 tfoot {
  border-bottom: none;
 }
@@ -37,7 +42,7 @@ tr:hover {background-color:#f5f5f5;}
 <form method = "post" action = "navigationServlet">
 <table align="center">
 <tr>
-	
+	<th>ISBN </th>
     <th>Book ISBN </th>
     <th>Book Title</th>
     <th>Category</th>
@@ -46,29 +51,35 @@ tr:hover {background-color:#f5f5f5;}
 </tr>
 <c:forEach items ="${requestScope.allBooks}" var="currentbooks">
 <tr>
-
- <td>${currentbooks.isbn}</td>
- <td>${currentbooks.title}</td>
- <td>${currentbooks.category}</td>
- <td>${currentbooks.pubDate}</td>
- <td>${currentbooks.cost}</td>
- 
+ <td><input type="radio" name="id" value="${currentbooks.isbn}"></td>
+ <td><b>${currentbooks.isbn}</b></td>
+ <td><b>${currentbooks.title}</b></td>
+ <td><b>${currentbooks.category}</b></td>
+ <td><b>${currentbooks.pubDate}</b></td>
+ <td><b>${currentbooks.cost}</b></td>
  </tr>
  <tr>
 
 </tr>
 </c:forEach>
-
+<tfoot>
+ <tr bgcolor ="#f5f5f5">
+ <td></td>
+  <td style="text-align:center;"><input type = "submit" value = "edit" name="doThis"></td>
+  <td></td>
+  <td style="text-align:center;"><input type = "submit" value = "delete" name="doThis"></td>
+  <td></td>
+  <td style="text-align:center;"><input type="submit" value = "add" name = "doThis"></td>
+ </tr>
+</tfoot>
 
 </table>
 
 </form>
-
-<br/>
-<br/>
-<center><u>
-<a href="index.html">Return To Home Page</a><br />
-</u></center>
-
+<br />
+<br />
+<center>
+<a href="viewAllOrdersServlet">Veiw All The Orders</a><br />
+</center>
 </body>
 </html>

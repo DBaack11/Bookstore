@@ -11,6 +11,7 @@ import model.Book;
 
 
 
+
 /**
  * Abutalib Hasan - amhasan
  * 202101 CIS171 12928
@@ -52,6 +53,18 @@ public class BookHelper {
 		em.getTransaction().commit();
 		em.close();
 		
+	} 
+	public Book searchForBookById(int idToEdit) {
+		// TODO Auto-generated method stub
+		
+
+		// TODO Auto-generated method stub
+		EntityManager em = emfactory.createEntityManager();
+		em.getTransaction().begin();
+		Book found = em.find(Book.class, idToEdit);
+		em.close();
+		return found;
+
 	}
 	
 	public void updateBook(Book toEdit) {
