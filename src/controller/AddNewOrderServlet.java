@@ -9,7 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.Book;
 import model.Order;
+import model.Student;
 
 /**
  * Servlet implementation class AddNewOrderServlet
@@ -30,6 +32,7 @@ public class AddNewOrderServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		BookHelper bh = new BookHelper();
 		OrderHelper oh = new OrderHelper();
 		String orderID = request.getParameter("orderID");
 		String isbn = request.getParameter("isbn");
@@ -40,14 +43,23 @@ public class AddNewOrderServlet extends HttpServlet {
 		String bookTitle = request.getParameter("bookTitle");
 		String studentID = request.getParameter("studentID");
 		LocalDate ld;
+		
+		Book tempBook = new Book();
+		tempBook.setTitle(bookTitle);
+		
+		Student tempStudent = new Student();
+		tempStudent.setStId(studentID);
+		
 		try {
 			ld = LocalDate.of(Integer.parseInt(year), Integer.parseInt(month), Integer.parseInt(day));
 		} catch (NumberFormatException ex) {
 			ld = LocalDate.now();
 		}
 		
+		Order o = new Order(Integer.parseInt(orderID), ld, tempBook, tempStudent);
+		oh.insertOrder(o);
 		
-		
+		getServletContext().getRequestDispatcher("/index.html").forward(request, response);
 	}
 
 	/**

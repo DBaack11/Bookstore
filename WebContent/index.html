@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Book Store</title>
 <style>
 
 table {
@@ -24,6 +24,11 @@ th, td {
 </style>
 </head>
 <body>
+
+<center>
+		<h1><strong><em><u>Welcome To The Book Store!</u></em></strong></h1>
+</center>	
+
 <br />
 <br />
 <br />
@@ -60,11 +65,88 @@ th, td {
 </table>
 </form> 
 <br />
-<br />
+
 <center>
-<a href="viewAllOrdersServlet">Veiw All The Orders</a><br />
-<a href="viewAllBooksServlet">Veiw All The Books</a>
+<u>
+<a href="viewAllBooksServlet">View All Books</a>
+</u>
 </center>
+<br />
+<br />
+
+
+<form action = "addNewOrderServlet" method="post">
+<table align="center">
+<tr>
+	<th colspan="2">Add New Order</th>
+</tr>
+<tr>
+<td align="right"> Order ID: </td> 
+<td><input type ="text" name = "orderID"></td>
+</tr>
+<tr>
+<td align="right">Order Date: </td> 
+<td><input type = "text" name = "year" placeholder="YYYY" size ="3"><input type = "text" name = "month" placeholder="MM" size ="3"><input type = "text" name = "day" placeholder="DD" size ="3"></td>
+</tr>
+<tr>
+<td align="right">ISBN: </td> 
+<td><input type = "text" name = "isbn"></td>
+</tr>
+<tr>
+<td align="right">Book Title: </td> 
+<td><input type = "text" name = "title"></td>
+</tr>
+<tr>
+<td align="right">Student ID: </td> 
+<td><input type = "text" name = "studentID"></td>
+</tr>
+<tr> 
+<td></td>
+<td><input type = "submit" value="Add Order"></td>
+</tr>
+</table>
+</form> 
+
+<br/>
+<center><u>
+<a href="viewAllOrdersServlet">View All Orders</a><br />
+</u></center>
+<br/>
+<br/>
+
+
+<form action = "addNewStudentServlet" method="post">
+<table align="center">
+<tr>
+	<th colspan="2">Add New Student</th>
+</tr>
+<tr>
+<td align="right"> Student ID: </td> 
+<td><input type ="text" name = "studentID"></td>
+</tr>
+<tr>
+<td align="right">First Name: </td> 
+<td><input type = "text" name = "firstName"></td>
+</tr>
+<tr>
+<td align="right">Last Name: </td> 
+<td><input type = "text" name = "lastName"></td>
+</tr>
+<tr> 
+<td></td>
+<td><input type = "submit" value="Add Student"></td>
+</tr>
+</table>
+</form> 
+
+<br/>
+<center><u>
+<a href="viewAllStudentsServlet">View All Students</a><br />
+</u></center>
+<br/>
+<br/>
+
+
 </body>
 </html>
 

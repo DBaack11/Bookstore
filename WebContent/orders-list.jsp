@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>List Of Orders</title>
 <style>
 table {
   border-collapse: collapse;
@@ -72,7 +72,9 @@ tr:hover {background-color:#f5f5f5;}
 <br />
 <center>
 <a href="viewAllOrdersServlet">Veiw All The Orders</a><br />
-<a href="index.html">Add a new Book</a><br />
+<center><u>
+<a href="index.html">Return To Home Page</a><br />
+</u></center>
 <a href = "viewAllBooksServlet">View All Books</a>
 </center>
 </body>

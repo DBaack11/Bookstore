@@ -6,6 +6,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+
+import model.Book;
 import model.Order;
 
 /**
@@ -15,6 +17,15 @@ import model.Order;
  */
 public class OrderHelper {
 	static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("BookStore");
+	
+	public void insertOrder(Order o) {
+		EntityManager em = emfactory.createEntityManager();
+		em.getTransaction().begin();
+		em.persist(o);
+		em.getTransaction().commit();
+		em.close();
+		
+	}
 	
 	public void setOrder(Order o) {
 		EntityManager em = emfactory.createEntityManager();
@@ -29,6 +40,10 @@ public class OrderHelper {
 		
 		List<Order> allOrders = em.createQuery("SELECT o FROM Order o").getResultList();
 		return allOrders;
+	}
+	
+	public void cleanUp() {
+		emfactory.close();
 	}
 	
 

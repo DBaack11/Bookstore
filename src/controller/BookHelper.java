@@ -54,6 +54,7 @@ public class BookHelper {
 		em.close();
 		
 	} 
+	
 	public Book searchForBookById(int idToEdit) {
 		// TODO Auto-generated method stub
 		

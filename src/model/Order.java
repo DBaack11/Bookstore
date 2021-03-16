@@ -27,7 +27,7 @@ public class Order {
 	@Column(name="ORD_DATE")
 	private LocalDate orderDate;
 	@ManyToOne(cascade=CascadeType.PERSIST)
-	@JoinColumn(name = "ISBN")
+	@JoinColumn(name = "TITLE")
 	private Book book;
 	
 	@ManyToOne(cascade=CascadeType.PERSIST)

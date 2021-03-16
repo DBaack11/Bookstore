@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Edit Book</title>
 <style>
 
 table {
@@ -33,18 +33,24 @@ th, td {
 <tr>
 	<th colspan="2">Update Book Information</th>
 </tr>
+
+
+
+<tr>
+<td><input type = "hidden" name = "id" value="${bookToUpdate.id}"></td>
+</tr>
 <tr>
 <td align="right">ISBN: </td> 
-<td><input type ="text" name = "isbn" value="${bookToEdit.isbn}"></td>
+<td><input type ="text" name = "isbn" value="${bookToUpdate.isbn}"></td>
 </tr>
 <tr>
 <td align="right">Title: </td>
-<td><input type = "text" name = "title" value= "${bookToEdit.title}"></td>
+<td><input type = "text" name = "title" value= "${bookToUpdate.title}"></td>
 </tr>
 
 <tr>
 <td align="right">Category: </td>
-<td><input type = "text" name = "category" value= "${bookToEdit.category}"></td>
+<td><input type = "text" name = "category" value= "${bookToUpdate.category}"></td>
 </tr>
 
 <tr>
@@ -56,8 +62,9 @@ th, td {
 </tr>
 <tr>
 <td align="right">Cost: </td>
-<td><input type = "text" name = "cost" value= "${bookToEdit.cost}"></td>
+<td><input type = "text" name = "cost" value= "${bookToUpdate.cost}"></td>
 </tr>
+
 <tr>
 <td><input type = "submit" value="Save Edited Item"></td>
 </tr>
