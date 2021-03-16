@@ -24,7 +24,6 @@ public class AddNewBookServlet extends HttpServlet {
      */
     public AddNewBookServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
